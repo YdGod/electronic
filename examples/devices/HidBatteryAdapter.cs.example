@@ -1,0 +1,34 @@
+using System;
+using System.Threading;
+
+namespace BatteryPet
+{
+    // Copy to src/Devices/Adapters/<Model>Battery.cs and register an instance.
+    internal sealed class ExampleBatteryAdapter : IHidBatteryAdapter
+    {
+        public string Id { get { return "example-model"; } }
+
+        public bool Supports(HidDescriptor descriptor)
+        {
+            // Replace with verified VID/PID + product + usage + lengths + report IDs.
+            // Keep false until the actual device and read-only protocol are established.
+            return false;
+        }
+
+        public DeviceBattery Read(HidDescriptor descriptor, CancellationToken cancellation)
+        {
+            cancellation.ThrowIfCancellationRequested();
+            if (!Supports(descriptor)) return null;
+            // Build only a confirmed status/battery request. Use HidQueryChannel with
+            // a finite timeout. Parse the response in a separate pure method.
+            throw new NotSupportedException("Implement the verified read-only query first.");
+        }
+
+        internal static DeviceBattery Parse(byte[] response)
+        {
+            // Validate length, report ID, command, status, checksum and child identity.
+            // Do not fill fields from guessed offsets or fabricate a percentage.
+            return null;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "SchemaVersion": 1,
+  "Id": "my-pet",
+  "Name": "我的小人",
+  "Description": "点击时向你打招呼",
+  "Author": "填写实际作者",
+  "License": "填写实际许可证标识",
+  "Frames": {
+    "Idle": "idle.png",
+    "Popup": "popup.png"
+  }
+}

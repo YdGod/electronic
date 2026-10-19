@@ -1,0 +1,12 @@
+{
+  "SchemaVersion": 1,
+  "Id": "phoebe",
+  "Name": "菲比啾比",
+  "Description": "菲比啾比向你敬礼!",
+  "Author": "用户提供；原作者未标注",
+  "License": "LicenseRef-User-Provided-Artwork",
+  "Frames": {
+    "Idle": "idle.png",
+    "Popup": "popup.png"
+  }
+}

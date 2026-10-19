@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BatteryPet device identity profile",
+  "type": "object",
+  "required": ["Product", "Vid", "Pid", "Name"],
+  "properties": {
+    "Product": { "type": "string", "minLength": 1 },
+    "Vid": { "type": "string", "pattern": "^[0-9a-fA-F]{4}$" },
+    "Pid": { "type": "string", "pattern": "^[0-9a-fA-F]{4}$" },
+    "Name": { "type": "string", "minLength": 1 },
+    "Kind": { "type": "string" },
+    "Connection": { "type": "string" }
+  }
+}

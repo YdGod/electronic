@@ -1,0 +1,21 @@
+using System.Collections.Generic;
+using System.Threading;
+
+namespace BatteryPet
+{
+    // Copy to src/Temperatures/Providers/ and register in TemperatureProviderRegistry.
+    internal sealed class ExampleGpuTemperature : ITemperatureProvider
+    {
+        public string Id { get { return "example-gpu-backend"; } }
+        public string Kind { get { return "GPU"; } }
+
+        public IEnumerable<TemperatureReading> Read(CancellationToken cancellation)
+        {
+            cancellation.ThrowIfCancellationRequested();
+            // Initialize the documented driver API here, use bounded queries,
+            // return real sensor values + UTC sample time, and release resources.
+            // An empty result means unsupported; it becomes an unknown placeholder.
+            return new TemperatureReading[0];
+        }
+    }
+}

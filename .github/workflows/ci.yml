@@ -1,0 +1,31 @@
+name: Windows build and checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run hardware-independent self-tests
+        shell: powershell
+        run: .\build.ps1 -Test
+      - name: Render sample UI
+        shell: powershell
+        run: |
+          $process = Start-Process .\dist\BatteryPet.exe -ArgumentList '--render-preview', 'dist\preview.png' -WindowStyle Hidden -PassThru
+          if (-not $process.WaitForExit(30000)) { $process.Kill(); throw 'Preview timed out.' }
+          if ($process.ExitCode -ne 0) { throw 'Preview failed.' }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: BatteryPet-widget-and-test-results
+          path: dist/
+          if-no-files-found: error

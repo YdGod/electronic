@@ -1,0 +1,19 @@
+name: 问题反馈
+description: 反馈电量、温度、界面或构建异常
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤、预期和实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: Windows 版本、挂件版本、设备型号/连接方式、CPU/GPU 型号和驱动版本。
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: 脱敏诊断或日志
+      description: 删除蓝牙地址、设备序列号、容器 ID、设备路径和用户名后再提交。

@@ -1,0 +1,8 @@
+{
+  "Product": "Example Receiver",
+  "Vid": "1234",
+  "Pid": "5678",
+  "Name": "示例无线鼠标",
+  "Kind": "鼠标",
+  "Connection": "2.4 GHz 接收器"
+}

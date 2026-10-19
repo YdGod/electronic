@@ -1,0 +1,21 @@
+name: 贡献皮肤
+description: 提交皮肤设计、素材或授权信息
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 皮肤名称和 ID
+    validations:
+      required: true
+  - type: textarea
+    id: attribution
+    attributes:
+      label: 作者、来源和授权
+      description: 请提供原创声明、公开许可证或作者明确授权。其他项目的代码许可证不一定涵盖图片。
+    validations:
+      required: true
+  - type: textarea
+    id: preview
+    attributes:
+      label: 素材与预览
+      description: 透明 PNG、skin.json、日常/弹窗两种状态截图；允许仅提供日常帧。

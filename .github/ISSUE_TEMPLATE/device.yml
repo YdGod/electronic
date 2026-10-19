@@ -1,0 +1,21 @@
+name: 设备适配
+description: 提交新设备信息、读取协议或实机验证结果
+body:
+  - type: input
+    id: model
+    attributes:
+      label: 品牌和完整型号
+    validations:
+      required: true
+  - type: textarea
+    id: connection
+    attributes:
+      label: 连接方式与硬件标识
+      description: 蓝牙、2.4 GHz 接收器或有线；VID/PID、产品名、UsagePage/Usage、报告长度。请删除序列号和个人路径。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 读取依据和验证
+      description: 官方协议来源或链接、脱敏报文、电量和充电字段、在线/离线结果、系统与驱动版本；暂时未知的内容可以说明。

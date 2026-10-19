@@ -1,0 +1,9 @@
+{
+  "Device": "MCHOSE K5 Ultra",
+  "Transport": "HID FF01/0001, report 4D, receiver 3837:1018",
+  "ObservedOn": "2026-10-19",
+  "ResponseHex": "4D-01-01-10-00-09-00-00-37-38-38-40-04-00-00-00-00-10-02-00-46-00-08-E4-D3-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00",
+  "ExpectedPercent": 70,
+  "ExpectedCharging": false,
+  "ExpectedConnected": true
+}

@@ -1,0 +1,12 @@
+LicenseRef-User-Provided-Artwork
+
+These images were supplied by the project owner and subsequently retouched.
+On 2026-10-20, the project owner confirmed that they may be published with
+this project.
+
+This notice records that confirmation; it is not an independent verification
+of permission from the original creator. No general permission to reuse,
+sublicense, or separately redistribute the artwork is granted by this notice
+or by the project's MIT license. Third-party character and artwork rights
+remain with their respective owners. Obtain any required permission for
+other uses.
